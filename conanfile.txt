@@ -1,0 +1,10 @@
+[build_requires]
+cmake/3.22.0
+
+[requires]
+openssl/1.1.1l
+poco/1.11.1
+
+[generators]
+cmake_find_package
+virtualenv

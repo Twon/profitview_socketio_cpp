@@ -1,24 +1,22 @@
-#ifndef SIO_ClientImpl_DEFINED
-#define SIO_ClientImpl_DEFINED
-
-#include <string>
-
-#include "Poco/Net/HTTPClientSession.h"
-#include "Poco/Net/WebSocket.h"
-#include "Poco/Logger.h"
-#include "Poco/Timer.h"
-#include "Poco/NotificationCenter.h"
-#include "Poco/Thread.h"
-#include "Poco/ThreadTarget.h"
-#include "Poco/RunnableAdapter.h"
-#include "Poco/URI.h"
-
-#include "Poco/JSON/Parser.h"
+#pragma once
 
 #include "SIONotificationHandler.h"
 #include "SIOEventRegistry.h"
 #include "SIOEventTarget.h"
 #include "SIOPacket.h"
+
+#include <Poco/JSON/Parser.h>
+#include <Poco/Net/HTTPClientSession.h>
+#include <Poco/Net/WebSocket.h>
+#include <Poco/Logger.h>
+#include <Poco/NotificationCenter.h>
+#include <Poco/Timer.h>
+#include <Poco/Thread.h>
+#include <Poco/ThreadTarget.h>
+#include <Poco/RunnableAdapter.h>
+#include <Poco/URI.h>
+
+#include <string>
 
 using Poco::Logger;
 using Poco::NotificationCenter;
@@ -100,5 +98,3 @@ private:
 	// Some implementations don't assume a masked payload - such as socket.io
 	bool _mask_payload;
 };
-
-#endif
