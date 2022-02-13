@@ -1,9 +1,8 @@
-#ifndef SIO_Client_INCLUDED
-#define SIO_Client_INCLUDED
+#pragma once
 
 #include "SIOClientImpl.h"
 
-#include "Poco/JSON/Array.h"
+#include <Poco/JSON/Array.h>
 
 using Poco::JSON::Array;
 using Poco::URI;
@@ -43,5 +42,3 @@ public:
 
 	void fireEvent(const char *name, Array::Ptr args);
 };
-
-#endif

@@ -1,7 +1,9 @@
 #pragma once
-#include "Poco/NotificationCenter.h"
+
 #include "SIONotifications.h"
-#include "Poco/Logger.h"
+
+#include <Poco/Logger.h>
+#include <Poco/NotificationCenter.h>
 
 using Poco::Logger;
 using Poco::NotificationCenter;
